@@ -95,6 +95,7 @@ public class Player : MonoBehaviour {
 
             velocity -= (gravity * Time.deltaTime);
 
+            //instantiate object if shooting
             if (Input.GetMouseButtonDown(0) && gotGun)
             {
                 Instantiate(SpawnCube, Camera.main.transform.position + Camera.main.transform.forward * 8.0f, Quaternion.identity);
