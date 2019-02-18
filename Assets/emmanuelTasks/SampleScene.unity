@@ -971,7 +971,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f705602b495141640a07e57f0b1dae34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movingObject: {fileID: 212366334}
   respawn: {fileID: 1432913365}
   speed: 2
 --- !u!54 &1445675059
@@ -1067,5 +1066,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 187304685529400555, guid: f5f67df754e57bd45981b490fbabaa65,
+        type: 3}
+      propertyPath: prefabGrowTest
+      value: 
+      objectReference: {fileID: 548424654, guid: 9f46963b5abd11442a42ada9bc70abef,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5f67df754e57bd45981b490fbabaa65, type: 3}

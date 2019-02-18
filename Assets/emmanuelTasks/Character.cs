@@ -8,10 +8,10 @@ public class Character : MonoBehaviour
     // Start is called before the first frame update
 
 
-    public float growSizeLimit, growRate, growTime;
+    //public float growSizeLimit, growRate, growTime;
 
 
-   // public 
+    public GameObject prefabGrowTest;
 
 
 
@@ -19,17 +19,20 @@ public class Character : MonoBehaviour
     void Start()
     {
        // rb = gameObject.GetComponent<Rigidbody>();
-        InvokeRepeating("Grow", 0.5f, growTime);
+       // InvokeRepeating("Grow", 0.5f, growTime);
     }
 
     // Update is called once per frame
     void Update()
     {
         
-        if (Input.GetKeyDown (KeyCode.Space))
+        if (Input.GetMouseButtonDown(0))
         {
 
             //rb.AddForce(new Vector3(0, 10, 0), ForceMode.Impulse);
+
+
+            Instantiate(prefabGrowTest, new Vector3(5, 5, 5), Quaternion.identity);
         }
 
         //Grow();
@@ -44,16 +47,16 @@ public class Character : MonoBehaviour
        // if(Input.GetKeyDown(KeyCode.A)){
 
 
-           if(!(transform.localScale.x == growSizeLimit)) {
+         //  if(!(transform.localScale.x == growSizeLimit)) {
             
-            transform.localScale += new Vector3(growRate, growRate, growRate);
+          //  transform.localScale += new Vector3(growRate, growRate, growRate);
 
 
 
-           }else
-           {
-            Destroy(this.gameObject, 2.0f);
-           }
+          // }else
+           //{
+            //Destroy(this.gameObject, 2.0f);
+           //}
 
            
            

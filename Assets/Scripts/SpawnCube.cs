@@ -6,8 +6,7 @@ public class SpawnCube : MonoBehaviour
 {
     //public Rigidbody rb;
     // Start is called before the first frame update
-
-
+                               
     public float growSizeLimit, growRate, growTime;
 
 
