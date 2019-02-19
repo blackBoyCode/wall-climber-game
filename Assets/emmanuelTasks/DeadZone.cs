@@ -34,6 +34,12 @@ public class DeadZone : MonoBehaviour
         CharacterController cc = collider.gameObject.GetComponent<CharacterController>();
         cc.enabled = false;
         collider.transform.position = respawn.transform.position;
+
+        if (Health.health > 0)
+        {
+            Health.health -= 1;
+        }
+
         
     }
 

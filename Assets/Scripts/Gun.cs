@@ -20,7 +20,7 @@ public class Gun : MonoBehaviour
     {
         if (other.name == "Player")
         {
-            //Player enable shooting
+            Player1.gotGun = true;
             Destroy(this.gameObject);
         }
     }

@@ -5,8 +5,9 @@ using UnityEngine;
 public class CheckPoints : MonoBehaviour
 {
 
-    public GameObject checkPoint_1, checkPoint_2, checkPoint_3;
+    public GameObject checkPoint_1, checkPoint_2, checkPoint_3, checkPoint_4, checkPoint_5;
     public GameObject GreenArrow;
+    public float greenArrowSize;
 
     public int locationNumber;
     float time;
@@ -31,8 +32,8 @@ public class CheckPoints : MonoBehaviour
                 time = Time.time;
                 GreenArrow.transform.position = checkPoint_2.transform.position;
                 locationNumber = 1;
-                Debug.Log(locationNumber);
-                Debug.Log(checkPoint_2.transform.position);
+                //Debug.Log(locationNumber);
+                //Debug.Log(checkPoint_2.transform.position);
             }
             if (locationNumber == 1 && (Time.time - time > 2))
             {
@@ -42,8 +43,16 @@ public class CheckPoints : MonoBehaviour
             }
             if (locationNumber == 2 && (Time.time - time > 2))
             {
-                //GreenArrow.transform.position = checkPoint_4.transform.position;
+                time = Time.time;
+                GreenArrow.transform.position = checkPoint_4.transform.position;
                 locationNumber = 3;
+            }
+            if (locationNumber == 3 && (Time.time - time > 2))
+            {
+                time = Time.time;
+                GreenArrow.transform.position = checkPoint_5.transform.position;
+                GreenArrow.transform.localScale = new Vector3(greenArrowSize, greenArrowSize, greenArrowSize);
+                locationNumber = 4;
             }
 
         }

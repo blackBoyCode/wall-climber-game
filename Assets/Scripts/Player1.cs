@@ -12,7 +12,7 @@ public class Player1 : MonoBehaviour {
     float runSpeed = 5.0f;
     float mouseSensitivity = 2.0f;
 
-    bool gotGun;
+    static public bool gotGun;
 
     Transform myTransform;
 
@@ -62,9 +62,15 @@ public class Player1 : MonoBehaviour {
 		cc = GetComponent <CharacterController> ();
 		cameraTransform = Camera.main.transform;
 		cameraParentTransform = cameraTransform.parent;
+        cursor.enabled = false;
 	}
 
 	void Update () {
+
+        if (gotGun)
+        {
+            cursor.enabled = true;
+        }
 
         if (!playerDeath)
         {
@@ -130,7 +136,7 @@ public class Player1 : MonoBehaviour {
                 objects[2] = Present;
                 objects[3] = Teddybear;
 
-                if (Input.GetMouseButtonDown(0)) // &&gotGun
+                if (Input.GetMouseButtonDown(0) && gotGun) 
                 {
                     //want a random object to be chosen
                     int random = Random.Range(0, 4);
@@ -163,10 +169,6 @@ public class Player1 : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-
-        if (other.gameObject.name == "gun") {
-            gotGun =true;
-        }
 
         if(other.gameObject.tag == "Diamond")
         {
