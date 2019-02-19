@@ -38,6 +38,9 @@ public class Player1 : MonoBehaviour {
     public AudioClip pineapple;
     public AudioClip present;
     public AudioClip teddybear;
+    public AudioClip collect;
+    public AudioClip platform;
+    public AudioClip final;
 
     public AudioSource audiosource;
 
@@ -153,31 +156,53 @@ public class Player1 : MonoBehaviour {
             gotGun =true;
         }
 
-       
+        if(other.gameObject.tag == "Diamond")
+        {
+
+            Destroy(other.gameObject);
+            //add 1 to the diamond count
+            ScoreScript.gemAmount = ScoreScript.gemAmount + 1;
+            audiosource.clip = collect;
+            audiosource.Play();
+        }
+        if(other.gameObject.tag == "PlatformSound")
+        {
+            Destroy(other.gameObject);
+            audiosource.clip = platform;
+            audiosource.Play();
+        }
+        if (other.gameObject.tag == "Finally")
+        {
+            Destroy(other.gameObject);
+            audiosource.clip = final;
+            audiosource.Play();
+        }
+
+
             //switch ("player")
-           // {
+            // {
 
-             //   case "checkPoint_1":
-             //       greenArrow.transform.position = other.transform.position;
-              //      break;
-              //  case "checkPoint_2":
-                //    greenArrow.transform.position = checkPoint_2.transform.position;
-                  //  break;
-                //case "checkPoint_3":
-                    //greenArrow.transform.position = checkPoint_3.transform.position;
-                    //break;
-                //default:
-                  //  print("none above");
-                    //break;
-
-
-          //  }
+            //   case "checkPoint_1":
+            //       greenArrow.transform.position = other.transform.position;
+            //      break;
+            //  case "checkPoint_2":
+            //    greenArrow.transform.position = checkPoint_2.transform.position;
+            //  break;
+            //case "checkPoint_3":
+            //greenArrow.transform.position = checkPoint_3.transform.position;
+            //break;
+            //default:
+            //  print("none above");
+            //break;
 
 
-        
+            //  }
 
 
-    }
+
+
+
+        }
 
 
 }
