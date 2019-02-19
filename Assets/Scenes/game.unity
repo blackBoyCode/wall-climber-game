@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.3587269, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2568,8 +2568,9 @@ MonoBehaviour:
   blue: {fileID: 21300002, guid: adae9c2c6994447278fc27c83d5f13bd, type: 3}
   Banana: {fileID: 548424654, guid: 9f46963b5abd11442a42ada9bc70abef, type: 3}
   Pineapple: {fileID: 525950685, guid: ce36a53fd0d5c4d44aace722f38e88b3, type: 3}
-  Present: {fileID: 100000, guid: 327073251ae8a234982bc18a7f6d1788, type: 3}
-  Teddybear: {fileID: 100000, guid: ab98d68f8e12c05489457582b89287e2, type: 3}
+  Present: {fileID: 4362296022931585371, guid: 58cf115491b268c4ba6a956ac5880178, type: 3}
+  Teddybear: {fileID: 6387151851613427812, guid: 18a333142825c8543acc5a2e33971dfc,
+    type: 3}
   banana: {fileID: 8300000, guid: 42509690e5a13404b9aa6db9d31b37f6, type: 3}
   pineapple: {fileID: 8300000, guid: 126c6e21a8fd17345bba0dbba0676b10, type: 3}
   present: {fileID: 8300000, guid: 6a9056cecf2bdcf44983eea654fefd00, type: 3}
@@ -2933,7 +2934,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c7f12d6441d47432e8c42874d46175c8, type: 3}
       propertyPath: m_RootOrder
-      value: 41
+      value: 42
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c7f12d6441d47432e8c42874d46175c8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -5967,7 +5968,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c7f12d6441d47432e8c42874d46175c8, type: 3}
       propertyPath: m_RootOrder
-      value: 42
+      value: 41
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c7f12d6441d47432e8c42874d46175c8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
