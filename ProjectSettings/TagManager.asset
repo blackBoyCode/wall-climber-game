@@ -7,6 +7,8 @@ TagManager:
   - Diamond
   - PlatformSound
   - Finally
+  - Enemy
+  - DeadZone
   layers:
   - Default
   - TransparentFX

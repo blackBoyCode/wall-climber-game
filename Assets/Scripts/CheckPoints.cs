@@ -8,7 +8,7 @@ public class CheckPoints : MonoBehaviour
     public GameObject checkPoint_1, checkPoint_2, checkPoint_3;
     public GameObject GreenArrow;
 
-    static int locationNumber;
+    public int locationNumber;
     float time;
     // Start is called before the first frame update
     void Start()

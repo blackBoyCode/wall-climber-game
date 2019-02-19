@@ -6,6 +6,7 @@ public class DeadZone : MonoBehaviour
 {
 
     public GameObject respawn;
+    public GameObject player;
     public float speed = 2;
 
    // private float horizontal, vertical;
@@ -13,7 +14,6 @@ public class DeadZone : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -31,6 +31,8 @@ public class DeadZone : MonoBehaviour
     {
         //if(collider)
         print("OnTriggerEnter");
+        CharacterController cc = collider.gameObject.GetComponent<CharacterController>();
+        cc.enabled = false;
         collider.transform.position = respawn.transform.position;
         
     }
