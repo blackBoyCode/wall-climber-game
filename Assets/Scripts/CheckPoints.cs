@@ -9,7 +9,7 @@ public class CheckPoints : MonoBehaviour
     public GameObject GreenArrow;
     public float greenArrowSize;
 
-    public int locationNumber;
+    static public int locationNumber;
     float time;
     // Start is called before the first frame update
     void Start()

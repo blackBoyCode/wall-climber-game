@@ -5,7 +5,7 @@ using UnityEngine;
 public class DeadZone : MonoBehaviour
 {
 
-    public GameObject respawn;
+    public GameObject checkPoint_1, checkPoint_2, checkPoint_3, checkPoint_4, checkPoint_5;
     public GameObject player;
     public float speed = 2;
 
@@ -23,7 +23,7 @@ public class DeadZone : MonoBehaviour
         //vertical = Input.GetAxis("Vertical");
 
         //movingObject.transform.Translate(new Vector3(horizontal, 0, vertical) * speed);
-
+        Debug.Log(CheckPoints.locationNumber);
     }
 
     //
@@ -33,8 +33,26 @@ public class DeadZone : MonoBehaviour
         print("OnTriggerEnter");
         CharacterController cc = collider.gameObject.GetComponent<CharacterController>();
         cc.enabled = false;
-        collider.transform.position = respawn.transform.position;
+        if (CheckPoints.locationNumber == 1)
+        {
+            collider.transform.position = checkPoint_1.transform.position;
 
+        }
+        if (CheckPoints.locationNumber == 2)
+        {
+            collider.transform.position = checkPoint_2.transform.position;
+
+        }
+        if (CheckPoints.locationNumber == 3)
+        {
+            collider.transform.position = checkPoint_3.transform.position;
+
+        }
+        if (CheckPoints.locationNumber == 4)
+        {
+            collider.transform.position = checkPoint_4.transform.position;
+
+        }
         if (Health.health > 0)
         {
             Health.health -= 1;

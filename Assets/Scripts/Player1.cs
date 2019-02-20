@@ -195,8 +195,9 @@ public class Player1 : MonoBehaviour {
 
         if (other.CompareTag("Enemy"))
         {
-            Destroy(cursor.gameObject);
-            playerDeath = true;
+            //Destroy(cursor.gameObject);
+        
+            cc.enabled = true;
         }
 
 
@@ -232,7 +233,7 @@ public class Player1 : MonoBehaviour {
 
     private void OnGUI()
     {
-        if (playerDeath)
+        if (Health.health == 0)
         {
             if (GUI.Button(new Rect(Screen.width / 2 - 150, Screen.height / 2, 300, 100), "Do you want to continue?"))
             {
