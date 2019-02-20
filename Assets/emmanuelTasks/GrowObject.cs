@@ -27,6 +27,7 @@ public class GrowObject : MonoBehaviour
         if (transform.localScale.x != GrowLimitTest)
             transform.localScale += Vector3.one;
         else CancelInvoke();
+             Destroy(gameObject, 4f);
 
 
     }
